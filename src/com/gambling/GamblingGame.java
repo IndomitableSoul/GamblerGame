@@ -21,20 +21,24 @@ public class GamblingGame {
    		}
    		}
    		
-   		
-   		
        }
 	public static void main(String[] args) {
 		
 		Gambler gambler1 = new Gambler();
-		
+		//UC-3
 		while(gambler1.stake!=Gambler.LOSE_STAKE && gambler1.stake!=Gambler.WIN_STAKE) {
 			gambling(gambler1);
-			System.out.println("________________");
 		}
-		
 		System.out.println("Final Stake: "+gambler1.stake+ " so Resigning");
 		
+		//UC-4
+		gambler1.stake = Gambler.DAILY_STAKE;
+		int days = 20;
+		for(int day=0; day<=days; day++) {
+			
+			gambling(gambler1);
+		}
+		System.out.println("Final Stake: "+gambler1.stake);
 	}
 
 }
