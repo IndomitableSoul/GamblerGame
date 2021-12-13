@@ -39,6 +39,14 @@ public class GamblingGame {
 			gambling(gambler1);
 		}
 		System.out.println("Final Stake: "+gambler1.stake);
+		
+		//UC5
+		gambler1.stake = Gambler.DAILY_STAKE;
+		int daysOfMonth = 30;
+		for(int day=1;day<=30;day++) {
+			gambling(gambler1);
+		}
+		System.out.println("Final stake:" +gambler1.stake);
 	}
 
 }
