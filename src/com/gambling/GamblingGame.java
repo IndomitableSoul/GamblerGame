@@ -8,7 +8,7 @@ public class GamblingGame {
 		Gambler gambler1 = new Gambler();
 		int trialCount=0;
 		double loseStake = Gambler.DAILY_STAKE - (0.5*Gambler.DAILY_STAKE);
-		double winStake = Gambler.DAILY_STAKE - (0.5*Gambler.DAILY_STAKE);
+		double winStake = Gambler.DAILY_STAKE + (0.5*Gambler.DAILY_STAKE);
 		
 		while(gambler1.stake!=loseStake && gambler1.stake!=winStake) {
 			System.out.println("Trial "+ ++trialCount);
@@ -25,8 +25,9 @@ public class GamblingGame {
 			break;
 		}
 		}
-		System.out.println(gambler1.stake);
 		}
+		System.out.println("Final Stake: "+gambler1.stake);
+		System.out.println("RESIGNING");
 	}
 
 }
